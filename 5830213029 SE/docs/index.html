@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8"/>
+	<title>Documentation &amp; Demos &ndash; YAML CSS Framework</title>
+
+	<!-- JavaScript Detection -->
+	<script>document.documentElement.className += " js";</script>
+
+	<!-- Mobile viewport optimisation -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="keywords" content="css, css framework, toolkit, css layout, grid, column, equal height, html5, css3, flexible, mobile layout, responsive layout, accessibility, modular, forms">
+	<meta name="description" content="Online documentation and usage examples  for all framework modules, containing responsive grids and columns, forms, navigations, typography and support for rtl-languages.">
+	<meta name="author" content="Dirk Jesse">
+	<meta name="publisher" content="Dirk Jesse, Highresolution.info">
+	<meta name="content-language" content="en">
+	<meta name="page-topic" content="Computer">
+	<meta name="revisit-after" content="2 days">
+	<meta name="robots" content="index,follow">
+	<link href="https://plus.google.com/+yaml" rel="publisher" />
+  <link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700&amp;text=YAML4%20CSS%20Framework" rel="stylesheet" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700|Droid+Sans:700" rel="stylesheet" type="text/css">
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css"/>
+	<link href="./assets/js/snippet/snippet.css" rel="stylesheet" type="text/css"/>
+
+	<!--[if lte IE 7]>
+	<link href="../yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-1851047-1']);
+	  _gaq.push(['_setDomainName', 'yaml.de']);
+	  _gaq.push(['_gat._anonymizeIp']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+<body id="yaml-top" class="doc">
+<!-- skip link navigation -->
+<ul class="ym-skiplinks">
+	<li><a class="ym-skip" href="#level2">Skip to navigation (Press Enter)</a></li>
+	<li><a class="ym-skip" href="#overview">Skip to main content (Press Enter)</a></li>
+</ul>
+
+<div id="intro" role="contentinfo">
+	Quiz ! Responsive CSS Framework  15 %
+
+</div>
+
+<header role="banner">
+	<div class="ym-wrapper">
+		<div class="ym-wbox">
+			<h1><span>YAML</span> 4</h1>
+			<h2>CSS Framework</h2>
+
+		</div>
+	</div>
+</header>
+
+
+											<div class="sign-up-modal">
+												<form class="details">
+															<div class="input-container">
+																	<input class="form-control" id="username" type="text" placeholder="Username" maxlength="8">
+															</div>
+															<div class="input-container">
+																	<input class="form-control" id="password" type="password" placeholder="Password">
+															</div>
+
+															<div class="col-sm-12 form-checkbox">
+																	<label>
+																			<input type="checkbox" value="true"> Keep me signed in</label>
+															</div>
+
+															<input id="signin" type="button" name="button" class="btn btn-primary"  value="Sign Up">
+
+															<p>If you forgot Password? <a href="#signIn">Click </a>!</p>
+
+													</form>
+													<div id="err" style="display:none" class="alert alert-danger alert-dismissable fade in">
+       										<a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+      										 <strong>Incorrect username or password</strong>
+      									 Please check your password.
+     										</div>
+												</div>
+
+
+
+<footer role="contentinfo">
+	<div class="ym-wrapper">
+		<div class="ym-wbox">
+			<div class="ym-grid linearize-level-2">
+				<div class="ym-g66 ym-gl">
+					<div class="ym-gbox-left">
+						<p>© 2005 &ndash; 2013 by Dirk Jesse, <a href="http://www.highresolution.info">Highresolution.info</a><br>
+
+					</div>
+				</div>
+				<div class="ym-g33 ym-gr">
+										</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- full skip link functionality in webkit browsers -->
+<script src="../yaml/core/js/yaml-focusfix.js"></script>
+
+<!-- jQuery & Plugins -->
+
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="./assets/js/snippet/jquery.snippet.js"></script>
+<script src="./assets/js/jquery.gridbuilder.js"></script>
+<script src="./assets/js/login.js"></script>
+<script src="../yaml/add-ons/accessible-tabs/jquery.tabs.js"></script>
+<script src="../yaml/add-ons/syncheight/jquery.syncheight.js"></script>
+<script src="./assets/js/domscript.js"></script>
+<script type="text/javascript">
+			$("#signin").click(function() {
+				var url = "http://membershipwebapi977290.azurewebsites.net/api/Members/signin?";
+				url += "username=" + $("#username").val();
+				url += "&password=" + $("#password").val();
+				console.log(url);
+				$.get(url, function(data, status) {
+					console.log(data);
+					if(data == true){
+						//Goto User's info
+console.log(data);
+					}else{
+						//Goto Sign up
+						$("#err").show();
+						//window.location.href = "signup.html";
+					}
+				});
+			});
+		</script>
+</body>
+</html>
